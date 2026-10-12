@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.container {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.success {
+  color: #15803d;
+  font-weight: bold;
+}
