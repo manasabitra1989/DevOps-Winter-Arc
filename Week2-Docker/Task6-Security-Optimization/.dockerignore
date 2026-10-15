@@ -1,0 +1,9 @@
+.git
+.gitignore
+runtime.env
+.env
+*.env
+reports/
+__pycache__/
+*.pyc
+.venv/
