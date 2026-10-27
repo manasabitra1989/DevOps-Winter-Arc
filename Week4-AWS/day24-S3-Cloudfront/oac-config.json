@@ -1,0 +1,7 @@
+{
+  "Name": "day24-s3-oac",
+  "Description": "Day 24 local Floci lab",
+  "SigningProtocol": "sigv4",
+  "SigningBehavior": "always",
+  "OriginAccessControlOriginType": "s3"
+}

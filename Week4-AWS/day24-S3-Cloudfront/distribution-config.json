@@ -1,0 +1,41 @@
+{
+  "CallerReference": "day24-1793080273",
+  "Comment": "Day 24 local Floci S3 website",
+  "Enabled": true,
+  "DefaultRootObject": "index.html",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "uploads-s3-origin",
+        "DomainName": "uploads.s3.amazonaws.com",
+        "S3OriginConfig": {
+          "OriginAccessIdentity": ""
+        },
+        "OriginAccessControlId": "587b650b-917e-476f-91cc-133a500dbc66"
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "uploads-s3-origin",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 2,
+      "Items": ["GET", "HEAD"],
+      "CachedMethods": {
+        "Quantity": 2,
+        "Items": ["GET", "HEAD"]
+      }
+    },
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": {
+        "Forward": "none"
+      }
+    },
+    "MinTTL": 0,
+    "DefaultTTL": 60,
+    "MaxTTL": 300,
+    "Compress": true
+  }
+}

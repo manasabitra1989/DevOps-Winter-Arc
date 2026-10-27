@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Length: 353
+Content-Type: text/html
+Date: Tue, 27 Oct 2026 08:01:35 GMT
+ETag: "cfa5fd8ab8c8a46655c0bf25a737b1a8"
+Last-Modified: Tue, 27 Oct 2026 05:28:06 GMT
+x-amz-id-2: 35f93b3c-24ea-4223-b448-775d91632f2e
+x-amz-request-id: 35f93b3c-24ea-4223-b448-775d91632f2e
+x-amz-storage-class: STANDARD
+x-amzn-RequestId: 35f93b3c-24ea-4223-b448-775d91632f2e
+
