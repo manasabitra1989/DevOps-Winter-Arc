@@ -1,8 +1,9 @@
+
 import os
 import time
 import redis
 import psycopg2
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
@@ -46,6 +47,37 @@ def index():
 @app.route("/health")
 def health():
     return "ok"
+
+
+@app.route("/breakdown")
+def breakdown():
+    # Get the total number of requests tracked by Redis
+    hits = get_redis().get("hits")
+    hits = int(hits) if hits is not None else 0
+
+    # Get visit statistics from PostgreSQL
+    with get_db() as conn:
+        with conn.cursor() as cur:
+            cur.execute("SELECT COUNT(*) FROM visits")
+            total_visits = cur.fetchone()[0]
+
+            cur.execute(
+                "SELECT id, ts FROM visits ORDER BY id DESC LIMIT 5"
+            )
+            recent_visits = cur.fetchall()
+
+    return jsonify({
+        "redis": {
+            "total_hits": hits
+        },
+        "postgres": {
+            "total_visits": total_visits,
+            "recent_visits": [
+                {"id": row[0], "timestamp": row[1].isoformat()}
+                for row in recent_visits
+            ]
+        }
+    })
 
 
 if __name__ == "__main__":
