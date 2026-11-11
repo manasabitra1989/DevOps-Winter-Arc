@@ -366,7 +366,7 @@ Multiple web Pods requiring shared upload or document storage.
 
 ## 4.4 CSI Driver Architecture
 
-![EBS CSI and EFS CSI Drivers](EBS-CSI_ EFS-CSI.png)
+![EBS CSI and EFS CSI Drivers](EBS-CSI_%20EFS-CSI.png)
 
 ### Important CSI Components
 
@@ -577,7 +577,7 @@ Do not create AWS storage just to populate the inspection output.
 
 # Task C – Understand the Storage Provisioning Flow
 
-![Kubernetes Storage Provisioning Flow](Kubernetes Storage Provisioning.png)
+![Kubernetes Storage Provisioning Flow](Kubernetes%20Storage%20Provisioning.png)
 
 ## 5.1 End-to-End Storage Provisioning
 
@@ -702,7 +702,7 @@ The `WaitForFirstConsumer` volume binding mode can help coordinate provisioning 
 
 # Task D – Design Two Storage Configurations
 
-![EKS Storage Designs – EBS and EFS](EKS Storage Designs_ EBS and EFS.png)
+![EKS Storage Designs – EBS and EFS](EKS%20Storage%20Designs_%20EBS%20and%20EFS.png)
 
 This task is a design exercise. The following examples demonstrate configuration choices; they do not assume that the referenced StorageClasses exist in the cluster.
 
